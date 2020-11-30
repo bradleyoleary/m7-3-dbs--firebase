@@ -5,7 +5,9 @@ import Avatar from './Avatar';
 import { AppContext } from './AppContext';
 
 const App = () => {
-  const { appUser, signInWithGoogle, handleSignOut } = useContext(AppContext);
+  const { appUser, signInWithGoogle, handleSignOut, message } = useContext(
+    AppContext
+  );
 
   return (
     <StyledPageWrapper>
@@ -20,7 +22,7 @@ const App = () => {
           <button onClick={signInWithGoogle}>Sign In</button>
         )}
       </StyledHeader>
-      <StyledContainer>page content</StyledContainer>
+      <StyledContainer>{message}</StyledContainer>
     </StyledPageWrapper>
   );
 };
